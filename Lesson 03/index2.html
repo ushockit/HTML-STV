@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 03</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        ul.menu {
+            margin: 0;
+            background-color: cadetblue;
+            text-align: center;
+        }
+        ul.menu > li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        ul.menu > li > a {
+            color: #fff;
+            text-decoration: none;
+        }
+        ul.menu > li > a:hover {
+            font-weight: bold;
+        }
+        .selected {
+            font-weight: bold;
+        }
+        .header-content {
+            min-height: 550px;
+            background-image: url('https://cdn.igromania.ru/mnt/news/1/f/6/b/1/7/96618/020a457cdfcb0850_1920xH.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: bottom;
+            background-attachment: fixed;
+        }
+        .container {
+            width: 75%;
+            margin: 0 auto;
+        }
+        main .container {
+            background-color:lightslategrey;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 1%;
+        }
+        footer .container {
+            background-color: lightyellow;
+            height: 100%;
+        }
+        main {
+            height: 900px;
+            background-color: darkgrey;
+        }
+        footer {
+            height: 200px;
+            background-color: lightcoral;
+        }
+        #news {
+            height: 200px;
+            background:cadetblue;
+        }
+        #informations {
+            margin-top: 50px;
+            background:chocolate;
+            text-align: center;
+        }
+        .block-1,
+        .block-2 {
+            width: 100px;
+            height: 100px;
+        }
+        .block-1 {
+            background: gray;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .block-2 {
+            background: purple;
+            border: 2px solid;
+            box-sizing: border-box;
+        }
+        #news::first-line {
+            text-decoration: underline;
+        }
+        #news::first-letter {
+            font-weight: bold;
+            font-size: 30px;
+            color: #f00;
+        }
+        .info {
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            display: inline-block;
+            margin: 15px 50px;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS селекторы - https://code.tutsplus.com/ru/tutorials/the-30-css-selectors-you-must-memorize--net-16048 -->
+    <!-- 
+        Семантические теги
+        header
+        main
+        footer
+        section
+        nav
+        aside
+        article
+     -->
+    <div class="block-1">
+        Hello world
+    </div>
+    <div class="block-2"></div>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Item 1</a></li>
+                <li class="selected"><a href="index2.html">Item 2</a></li>
+                <li><a href="#informations">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+                <li><a href="#">Item 5</a></li>
+            </ul>
+        </nav>
+        <div class="header-content"></div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="news">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, quam voluptatibus quidem dolor ratione ut, perferendis mollitia et eligendi similique illo consequatur ex reprehenderit nostrum? Quo ea eos soluta repellat?
+            </div>
+            <div id="informations">
+                <div class="info">Hello</div><div class="info">Hello world</div><div class="info"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container"></div>
+    </footer>
+</body>
+</html>
