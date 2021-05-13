@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 5000px;
+        }
+
+        .button {
+            min-width: 100px;
+            min-height: 30px;
+            background-color: chocolate;
+            transition: all ease 1.5s;
+            position: relative;
+            left: 10px;
+            top: 10px;
+        }
+
+        .button:hover {
+            background-color: coral;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
+        }
+
+        .content {
+            padding-top: 100px;
+        }
+
+        .list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .list>li {
+            font-size: 20px;
+            /* transition: color ease .25s; */
+            transition-property: color;
+            transition-timing-function: ease;
+            transition-duration: .25s;
+        }
+
+        .list>li:hover {
+            color: rgba(0, 0, 0, .6);
+            cursor: pointer;
+        }
+
+        .list>li:nth-child(odd) {
+            background-color: yellowgreen;
+        }
+
+        .list>li:nth-child(even) {
+            background-color: chocolate;
+        }
+
+        .absolute-content {
+            width: 100px;
+            height: 100px;
+            background-color: rosybrown;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .card {
+            width: 300px;
+            height: 350px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, .3);
+            background-color: rgb(237, 236, 236);
+            position: relative;
+        }
+
+        .card .card-img-content {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+        }
+
+        .card .card-img-content img {
+            height: 100%;
+        }
+
+        .stars {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+
+        .star {
+            width: 15px;
+        }
+
+        /* .block {
+            display: inline-block;
+            height: 80px;
+            width: 20vw;
+        } */
+        .menu {
+            background-color: goldenrod;
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            z-index: 99999;
+        }
+        .call {
+            position: fixed;
+            width: 75px;
+            height: 75px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 100%;
+            background-color: indianred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Позиционирование -->
+    <!-- 
+        - static
+        - absolute
+        - relative
+        - sticky
+        - fixed
+     -->
+    <!-- <div class="menu"></div> -->
+    <div class="call"></div>
+    <div class="absolute-content"></div>
+    <div class="content">
+        <div class="card">
+            <div class="card-img-content">
+                <div class="stars">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                </div>
+                <img src="https://lh3.googleusercontent.com/proxy/wjOddPPlQTc6F8zfmPPzpchDhtJGuQk8BsDVtHFFld7z6W9mHohmETz6FgPXT1vFChGuGsPLPSAIev_J8BNFulJsNKJ5iTUXDbWoAiGM3WvDSNSuWw"
+                    alt="">
+            </div>
+            <div class="card-content">
+                <div class="card-title"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-content">
+                <div class="stars">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                </div>
+                <img src="https://lh3.googleusercontent.com/proxy/wjOddPPlQTc6F8zfmPPzpchDhtJGuQk8BsDVtHFFld7z6W9mHohmETz6FgPXT1vFChGuGsPLPSAIev_J8BNFulJsNKJ5iTUXDbWoAiGM3WvDSNSuWw"
+                    alt="">
+            </div>
+            <div class="card-content">
+                <div class="card-title"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-content">
+                <div class="stars">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                    <img class="star" src="./images/star.png" alt="">
+                </div>
+                <img src="https://lh3.googleusercontent.com/proxy/wjOddPPlQTc6F8zfmPPzpchDhtJGuQk8BsDVtHFFld7z6W9mHohmETz6FgPXT1vFChGuGsPLPSAIev_J8BNFulJsNKJ5iTUXDbWoAiGM3WvDSNSuWw"
+                    alt="">
+            </div>
+            <div class="card-content">
+                <div class="card-title"></div>
+            </div>
+        </div>
+    
+        <!-- Transition(переходы) -->
+        <button class="button">Hello</button>
+        
+    </div>
+    <!-- <div class="block bl-1">
+        <a href="#">Block 1</a>
+    </div>
+    <div class="block bl-2">
+        <a href="#">Block 2</a>
+    </div> -->
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+
+</html>
