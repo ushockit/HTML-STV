@@ -1,0 +1,62 @@
+<!-- https://habr.com/ru/post/313938/ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: flex;
+            /* flex-direction: row; */
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            height: 500px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            align-items: center;
+        }
+        .child {
+            width: 200px;
+            height: 200px;
+            margin: 1%;
+        }
+        .red {
+            background-color: red;
+            order: 2;
+            flex-grow: 2;
+            align-self: flex-start;
+        }
+        .green {
+            background-color: green;
+            order: 3;
+            flex-grow: 2;
+            align-self: flex-end;
+        }
+        .blue {
+            background-color: blue;
+            order: 1;
+            flex-grow: 1;
+
+        }
+        .gold {
+            background-color: gold;
+            order: 4;
+            flex-grow: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child red"></div>
+        <div class="child green"></div>
+        <div class="child blue"></div>
+        <div class="child gold"></div>
+    </div>
+</body>
+
+</html>
