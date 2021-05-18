@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            --text-color: rgba(0,0,0,.8);
+        }
+        body {
+            margin: 0;
+        }
+        header .content {
+            min-height: 60px;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+        }
+        header nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+        }
+        main > div.content {
+            display: flex;
+            height: 500px;
+        }
+        main > div.content > div:nth-child(1) {
+            flex-grow: 1;
+            background-color: blanchedalmond;
+        }
+        main > div.content > div:nth-child(2) {
+            background-color: brown;
+            flex-grow: 2;
+        }
+        main > div:last-child {
+            min-height: 100px;
+            background-color: cadetblue;
+        }
+        .menu {
+            color: var(--text-color);
+        }
+        .sub-content {
+            color: var(--text-color);
+        }
+        footer {
+            color: var(--text-color);
+        }
+        
+
+        @media (max-width: 576px) {
+            main > div.content {
+                flex-direction: column;
+            }
+            .menu {
+                display: none;
+            }
+            header {
+                justify-content: flex-end;
+            }
+            header div.content {
+                justify-content: flex-end;
+            }
+            .hamburger {
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <nav class="menu">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+            </nav>
+            <a class="hamburger"><img width="40" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="sub-content">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae aliquam obcaecati dolorem suscipit animi aperiam itaque aut architecto modi ipsa, id ratione consectetur similique, cum hic, cupiditate velit odit?</div>
+        </div>
+    </main>
+    <footer>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nobis fuga voluptatibus odit sint nisi quo nemo consequuntur fugit, a deleniti perferendis numquam quaerat exercitationem cum amet commodi velit repellat.</div>
+    </footer>
+</body>
+</html>
